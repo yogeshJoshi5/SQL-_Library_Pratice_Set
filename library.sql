@@ -314,17 +314,6 @@ $$
 
 
 
-/*
-Task 15: Branch Performance Report
-Create a query that generates a performance report for each branch, showing the number of books issued, 
-the number of books returned, and the total revenue generated from book rentals.
-*/
-
-select * from branch
-select * from issued_status
-select * from return_status
-select * from books
-
 
 --Task 16: CTAS: Create a Table of Active Members
 -- Use the CREATE TABLE AS (CTAS) statement to create a new table active_members 
@@ -356,6 +345,7 @@ on e.emp_id =  ist.issued_emp_id
 group by e.emp_id,e.emp_name,e.branch_id
 order by count(ist.issued_emp_id) desc 
 limit 3
+
 
 
 
